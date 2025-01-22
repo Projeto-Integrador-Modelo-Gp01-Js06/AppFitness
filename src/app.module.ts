@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-
-@Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
-})
-export class AppModule {}
-=======
 import { Module } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { ExercicioModule } from "./exercicio/exercicio.module";
 import { Exercicio } from "./exercicio/entities/exercicio.entity";
+import { Categoria } from "./categoria/entities/categoria.entity";
+import { CategoriaModule } from "./categoria/categoria.module";
+
 
 @Module({
     imports: [
@@ -24,13 +15,13 @@ import { Exercicio } from "./exercicio/entities/exercicio.entity";
         username: 'root',
         password: 'root',
         database: 'db_fitnessapp',
-        entities: [Exercicio],
+        entities: [Exercicio, Categoria],
         synchronize: true,
       }),
       ExercicioModule,
+      CategoriaModule
     ],
     controllers: [],
     providers: [],
   })
   export class AppModule {}
->>>>>>> origin/atualizações-carlos

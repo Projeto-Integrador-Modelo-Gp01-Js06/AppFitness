@@ -2,6 +2,7 @@ import { Transform, TransformFnParams } from "class-transformer";
 import { IsInt, IsNotEmpty, IsNumber, IsPositive, Min } from "class-validator";
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { NumericTransformer } from "../../util/numerictransformer";
+import { Categoria } from "../../categoria/entities/categoria.entity";
 
 @Entity({ name: "tb_exercicios" })
 export class Exercicio {
