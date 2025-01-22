@@ -11,5 +11,3 @@ import { ExercicioService } from "./services/exercicio.service";
   exports: [TypeOrmModule],
 })
 export class ExercicioModule {}
-
-
