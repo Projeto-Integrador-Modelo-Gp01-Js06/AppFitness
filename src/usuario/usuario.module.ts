@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { UsuarioService } from './usuario.service';
-import { UsuarioController } from '../controller/usuario.controller';
+import { UsuarioService } from './services/usuario.service';
+import { UsuarioController } from '../usuario/controllers/usuario.controller';
 import { Usuario } from './entities/usuario.entity';
 
 // Define o módulo do usuário, que conecta o controller, service e a entidade
