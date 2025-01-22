@@ -4,6 +4,8 @@ import { ExercicioModule } from "./exercicio/exercicio.module";
 import { Exercicio } from "./exercicio/entities/exercicio.entity";
 import { UsuarioModule } from "./usuario/usuario.module";
 import { Usuario } from "./usuario/entities/usuario.entity";
+import { CategoriaModule } from "./categoria/categoria.module";
+import { Categoria } from "./categoria/entities/categoria.entity";
 
 @Module({
     imports: [
@@ -14,11 +16,12 @@ import { Usuario } from "./usuario/entities/usuario.entity";
         username: 'root',
         password: 'root',
         database: 'db_fitnessapp',
-        entities: [Exercicio, Usuario],
+        entities: [Exercicio, Categoria, Usuario],
         synchronize: true,
       }),
       ExercicioModule,
-      UsuarioModule
+      CategoriaModule,
+      UsuarioModule,
     ],
     controllers: [],
     providers: [],

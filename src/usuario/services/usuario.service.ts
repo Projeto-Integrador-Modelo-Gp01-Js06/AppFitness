@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Usuario } from '../entities/usuario.entity';
@@ -38,7 +38,16 @@ export class UsuarioService {
 
   // Buscar um usuário pelo ID
   async buscarPorId(id: number): Promise<Usuario> {
-    return this.usuarioRepository.findOne({ where: { id } });
+    const usuario = await this.usuarioRepository.findOne({
+      where: {
+        id
+      }
+    });
+
+    if (!usuario)
+      throw new HttpException('Usuario não encontrado!', HttpStatus.NOT_FOUND);
+
+  return usuario;
   }
 
   // Atualizar os dados de um usuário pelo ID
