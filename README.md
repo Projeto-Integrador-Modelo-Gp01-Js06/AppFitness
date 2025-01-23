@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 # FitJourney - API de Gestão de Atividades Físicas 🏋️‍♂️🏃‍♀️
 
