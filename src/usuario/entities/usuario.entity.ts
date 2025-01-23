@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, BeforeInsert, BeforeUpdate } from 'typeorm';
 
 // Define a entidade (tabela) no banco de dados chamada "usuarios"
-@Entity('usuarios')
+@Entity('tb_usuarios')
 export class Usuario {
 
   // Chave primária gerada automaticamente
