@@ -29,7 +29,7 @@ export class Usuario {
   peso: number;
 
   // Altura do usuário (também armazenado como float)
-  @Column('float')
+  @Column('decimal', { scale: 2 })
   altura: number;
 
   // IMC (Índice de Massa Corporal), inicialmente pode ser nulo e será calculado automaticamente
