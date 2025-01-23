@@ -46,7 +46,7 @@ export class CategoriaService{
                 nome: ILike(`%${nome}%`),
             },
             relations:{
-                exercicio:true,
+                exercicio:true
             },
         });
     }
