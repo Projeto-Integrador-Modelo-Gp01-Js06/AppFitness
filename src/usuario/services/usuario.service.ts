@@ -20,13 +20,15 @@ export class UsuarioService {
   }
 
   // Criar um novo usuário
-  async criarUsuario(dto: CreateUsuarioDto): Promise<Usuario> {
-    const novoUsuario = this.usuarioRepository.create(dto);
+  async criarUsuario(dto: CreateUsuarioDto): Promise<any> {
+    if (await this.usuarioRepository.findOne({ where: { email: dto.email } })) {
+      return "E-mail já cadastrado";
+    }
   
     // Gera a foto automaticamente com base no gênero
-    const generoPath = dto.genero.toLowerCase() === 'feminino' ? 'women' : 'men';
-    const fotoId = Math.floor(Math.random() * 100);
-    novoUsuario.foto = `https://randomuser.me/api/portraits/${generoPath}/${fotoId}.jpg`;
+    const novoUsuario = this.usuarioRepository.create(dto);
+    
+    novoUsuario.foto = `https://randomuser.me/api/portraits/${dto.genero.toLowerCase() === 'feminino' ? 'women' : 'men'}/${Math.floor(Math.random() * 100)}.jpg`;
   
     return this.usuarioRepository.save(novoUsuario);
   }

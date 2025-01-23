@@ -57,7 +57,8 @@ export class Exercicio {
     data: Date;
 
     @ManyToOne(() => Categoria, (categoria) => categoria.exercicio, {
-        onDelete: "CASCADE"
+        onDelete: "CASCADE",
+        
     })
     categoria: Categoria;
 }
