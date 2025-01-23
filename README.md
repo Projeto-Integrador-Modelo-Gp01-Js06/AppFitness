@@ -1,7 +1,8 @@
+<<<<<<< HEAD
+
 # FitJourney - API de Gestão de Atividades Físicas 🏋️‍♂️🏃‍♀️
 
-A API FitJourney é um sistema completo para gerenciamento de atividades físicas, desenvolvido com TypeScript, NestJS e TypeORM. Ela permite o cadastro e gerenciamento de usuários, te ajuda a alcançar seus objetivos de forma eficiente. Cadastre seus treinos, acompanhe seu progresso, calcule seu IMC e muito mais!
-------
+## A API FitJourney é um sistema completo para gerenciamento de atividades físicas, desenvolvido com TypeScript, NestJS e TypeORM. Ela permite o cadastro e gerenciamento de usuários, te ajuda a alcançar seus objetivos de forma eficiente. Cadastre seus treinos, acompanhe seu progresso, calcule seu IMC e muito mais!
 
 ## 1. Descrição 📋
 
@@ -24,7 +25,7 @@ Esta API foi criada para atender à necessidade de gerenciamento de usuários e 
 5. **Edição e Atualização de Dados** ✏️
    Permite a atualização das informações de usuários, exercícios e categorias, garantindo que os dados estejam sempre atualizados.
 
-------
+---
 
 ## 2. Diagrama de Classes 📊
 
@@ -68,8 +69,7 @@ class Categoria {
 Exercicio "1" --> "1" Categoria : pertence a
 ```
 
-------
-
+---
 
 ## 3. Tecnologias utilizadas
 
@@ -81,7 +81,7 @@ Exercicio "1" --> "1" Categoria : pertence a
 | **ORM**                       | TypeORM    |
 | **Banco de dados Relacional** | MySQL      |
 
-------
+---
 
 ## 4. Configuração e Execução
 
